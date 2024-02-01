@@ -113,6 +113,9 @@ nav {
     padding: 1em 1.5em;
     padding-top: 5em;
 }
+.titleService {
+    margin: 1em 0;
+}
 .itemsService {
     width: 100%;
     display: flex;
@@ -153,7 +156,7 @@ nav {
     padding-top: 5em;
 }
 .titleContact {
-    margin-top: 1em;
+    margin: 1em 0;
 }
 .itemContact {
     margin: auto 0;
