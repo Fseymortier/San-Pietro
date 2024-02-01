@@ -1,0 +1,260 @@
+@import url(https://db.onlinewebfonts.com/c/6f8bf7559886e21786228848fff1d081?family=Miss+Donna+W01+Regular);
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Miss Donna W01 Regular';
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    font-size: 4em;
+}
+h2 {
+    font-size: 3em;
+}
+h3 {
+    font-size: 2em;
+    color: #009900;
+}
+/*--------------------header-----------------------------------*/
+header {
+    color: white;
+}
+nav {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #990000;
+    padding: 1em;
+}
+.textHeader {
+    font-family: 'Miss Donna W01 Regular';
+    font-weight: bold;
+    font-size: 1.7em;
+}
+.containerLiens {
+    text-align: center;
+}
+.lienNav {
+    text-decoration: none;
+    color: white;
+    margin: 0 1em;
+}
+.itemHeader {
+    width: 100%;
+    height: 25em;
+    background-image: url(images/pizza-2810589_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5em 0;
+    padding-top: 5em;
+}
+.boutonHeader {
+    padding: 0.5em 20%;
+    font-size: 1.5em;
+    border: 1px solid black;
+    border-radius: 2em;
+    color: white;
+    background-color: #990000;
+    cursor: pointer;
+}
+/*----------------section carte--------------------------------*/
+.containerCarte {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em 0.5em;
+    border: 1px solid black;
+    padding-top: 5em;
+}
+.titleCarte {
+    color: #009900;
+}
+.entre,
+.plat,
+.dessert {
+    width: 30%;
+    min-width: 214px;
+    margin: 01em;
+    animation: carte 2s ease-in-out;
+}
+.imageCarte {
+    width: 100%;
+    object-fit: contain;
+    animation: imgcarte 2s ease-in-out;
+}
+/*----------------section service------------------------------*/
+.containerservice {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #990000;
+    color: white;
+    padding: 1em 1.5em;
+    padding-top: 5em;
+}
+.itemsService {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1.5em 0;
+}
+.txtService {
+    width: 40%;
+    min-width: 210px;
+    min-height: 164px;
+    height: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #5c0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+}
+.imageService {
+    width: 40%;
+    min-width: 210px;
+    min-height: 164px;
+    object-fit: contain;
+}
+/*----------------section contact------------------------------*/
+.containerContact {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #009900;
+    border: 1px solid black;
+    padding: 1.5em 1.5em;
+    padding-top: 5em;
+}
+.titleContact {
+    margin-top: 1em;
+}
+.itemContact {
+    margin: auto 0;
+    width: 40%;
+    min-width: 320px;
+    animation: translateL 1s ease-in-out;
+}
+.itemsContact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3em 0;
+}
+.iconeContact {
+    width: 20%;
+    margin-right: 1em;
+}
+.imageMap {
+    width: 50%;
+    min-width: 250px;
+    object-fit: contain;
+    animation: translateR 1s ease-in-out;
+}
+/*--------------------footer-----------------------------------*/
+footer {
+    text-align: center;
+    background-color: #990000;
+    color: white;
+    padding: 1.5em 1.5em;
+}
+.textFooter {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Miss Donna W01 Regular';
+}
+/*---------------------animation-------------------------------*/
+/*--------------animation carte---------------*/
+@keyframes carte {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes imgcarte {
+    from {
+        rotate: 1440deg;
+        border-radius: 100%;
+    }
+    to {
+        rotate: 0deg;
+        border-radius: 0;
+    }
+}
+/*------------animation services--------------*/
+.itemsService1 {
+    animation: translateL 1s ease-in-out;
+}
+.itemsService2 {
+    transform: translateX(100%);
+    animation: translateR 1s ease-in-out 0.5s forwards;
+}
+.itemsService3 {
+    transform: translateX(-100%);
+    animation: translateL 1s ease-in-out 1s forwards;
+}
+@keyframes translateL {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0em);
+    }
+}
+@keyframes translateR {
+    from {
+        transform: translateX(110%);
+    }
+    to {
+        transform: translateX(0em);
+    }
+}
+/*---------------------media-----------------------------------*/
+@media (max-width: 660px) {
+    .itemsService {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .itemsService2 {
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width: 483px) {
+    .itemContact {
+        width: 80%;
+    }
+}
+@media (max-width: 472.5px) {
+    #carte,
+    #service {
+        padding-top: 6em;
+    }
+}
